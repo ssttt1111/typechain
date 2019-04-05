@@ -4,7 +4,7 @@ Learning Typescript by making a Blockchain with it
 
 ## Configuration
 
-### tsconfig.json
+### tsconfig.json 파일 생성
 
 - [`node.js`](https://nodejs.org/ko/)는 [`TpyeScript`](https://www.typescriptlang.org/)를 이해하지 못하기 때문에 `JaveScript` 코드로 컴파일하는 작업이 필요하다.
 
