@@ -22,7 +22,7 @@ Learning Typescript by making a Blockchain with it
 
 ### 컴파일 옵션
 
-- **module:** [`node.js`](https://nodejs.org/ko/)를 평범하게 사용하고 다양한 걸 import하거나 export할 수 있게 만드는 것.
+- **module:** [`node.js`](https://nodejs.org/ko/)를 평범하게 사용하고 다양한 걸 `import`하거나 `export`할 수 있게 만드는 것.
 - **target:** 어떤 버전의 자바스크립트로 컴파일 시킬 것인지 적음.
 - **sourceMap:** `true`로 설정해서 sourcemap 처리를 할 것인지 알려줌.
 
@@ -37,7 +37,7 @@ Learning Typescript by making a Blockchain with it
 tsc
 ```
 
-- **tsc:** `index.ts`의 코드를 컴파일해서 `index.js`/`index.js.map`을 만들어 준다.
+- **tsc:** 터미널에서 tsc를 입력. `index.ts`의 코드를 컴파일해서 `index.js`/`index.js.map`을 만들어 준다.
 
 ```json
 "scripts": {
