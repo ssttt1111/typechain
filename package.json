@@ -5,5 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/ssttt1111/typechain",
   "author": "Suwan Choi <ssttt1111@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "tsc"
+  }
 }
