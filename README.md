@@ -47,3 +47,33 @@ tsc
 ```
 
 > `tsc` 명령어 대신 `yarn start`를 사용하기 때문에 package.json을 다음과 같이 설정한다.
+
+### TypeScript의 마법
+
+#### Typed
+
+- 어떤 종류의 변수와 데이터인지 설정해줘야 한다.
+
+```sh
+string, boolean, number[array]
+```
+
+#### TypeScript의 기능
+
+- TypeScript에서 변수와 함수를 생성하여 매개변수 값을 넘겨준다.
+
+```ts
+const name = "Suwan",
+  age = 24,
+  gender = "male";
+
+const sayHi = (name, age, gender) => {
+  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
+};
+
+sayHi(name, age, gender);
+```
+
+위 `sayHi` 함수의 매개변수 `gender`를 제거하고 다시 실행을 해보면 아래와 같은 에러가 발생한다.
+
+[![](img/error.png)]
