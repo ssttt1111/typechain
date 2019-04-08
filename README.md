@@ -158,7 +158,7 @@ yarn add tsc-watch --dev
 
 > `index.ts` 파일을 src에 옮겨준다. 그리고 `index.js`/`index.js.map`을 삭제. 그리고 dist파일을 ignore해준다.
 
-- **error가 발생하면 [`typescript`]를 다시 한 번 설치해준다**
+- **error가 발생하면 [`typescript`](https://www.typescriptlang.org/)를 다시 한 번 설치해준다**
 
 ```sh
 yarn add typescript
