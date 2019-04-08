@@ -76,6 +76,6 @@ sayHi(name, age, gender);
 
 위 `sayHi` 함수의 arguments `gender`를 제거하고 다시 실행을 해보면 아래와 같은 에러가 발생한다.
 
-[![](img/error.png)
+(img/error.png)
 
 이 에러를 해석해보면, `나는 3개의 args가 올 것을 예상했지만, 2개 밖에 얻지 못했어. 그래서 난 이 함수를 실행하지 않을거야!` 라는 뜻이다.
