@@ -170,7 +170,7 @@ yarn add typescript
 
 #### Object를 넘겨줘볼까
 
-함수에 `Object`를 넘겨주고 싶다면, `TypeScript`가 `Object`를 이해할 수 있게 해야 되고, 그 `Object`가 올바른 `type`인지 아닌지 분별하게끔 해야 된다.
+- 함수에 `Object`를 넘겨주고 싶다면, `TypeScript`가 `Object`를 이해할 수 있게 해야 되고, 그 `Object`가 올바른 `type`인지 아닌지 분별하게끔 해야 된다.
 
 위의 예제를 사용해 예를 들어보자.
 
