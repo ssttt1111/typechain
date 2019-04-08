@@ -133,7 +133,7 @@ yarn add tsc-watch --dev
 - 그 다음 package.json 의 script에서 아래와 같이 설정해준다
 - src파일과 dist파일을 새로 생성 후, tsconfig.json도 아래와 같이 설정해준다.
 
-##### package.json
+##### package.json 설정
 
 ```json
 "scripts": {
@@ -141,7 +141,7 @@ yarn add tsc-watch --dev
   }
 ```
 
-##### tsconfig.json
+##### tsconfig.json 설정
 
 ```json
 {
