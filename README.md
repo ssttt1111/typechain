@@ -72,7 +72,11 @@ const sayHi = (name, age, gender) => {
 };
 
 sayHi(name, age, gender);
+
+export {};
 ```
+
+> `export {};` 가 없으면 에러가 나기 때문에 꼭 적어 넣는다.
 
 위 `sayHi` 함수의 arguments `gender`를 제거하고 다시 실행을 해보면 아래와 같은 에러가 발생한다.
 
@@ -95,3 +99,69 @@ Hello Suwan, you are 24, you are a undefined
 ```
 
 ##### 대단한 기능이다..!!
+
+#### Types
+
+인수에 데이터값을 지정하기.
+
+```ts
+const sayHi = (name: string, age: number, gender: string) => {
+  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
+};
+
+sayHi("Suwan", 28, "male");
+
+export {};
+```
+
+> `name: string, age: number, gender: string`
+
+인수에 데이터값을 지정해줌으로써 실수를 줄이고 본인이 만드는 코드를 더 예측하기 쉽도록 한다.
+
+그리고 sayHi 함수에 마우스를 올려보면 `...) => void` 라고 나오는데, `void`는 빈공간이라는 뜻이다.
+
+#### 자동 새로고침
+
+- `yarn start`로 새로고침 하는게 지겹다. 다음과 같이 설정해준다.
+
+```sh
+yarn add tsc-watch --dev
+```
+
+위와 같이 인스톨한다.
+
+- 그 다음 package.json 의 script에서 아래와 같이 설정해준다
+- src파일과 dist파일을 새로 생성 후, tsconfig.json도 아래와 같이 설정해준다.
+
+##### package.json
+
+```json
+"scripts": {
+    "start": "tsc-watch --onSuccess \" node dist/index.js\" "
+  }
+```
+
+##### tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES2015",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node-modules"]
+}
+```
+
+> `index.ts` 파일을 src에 옮겨준다. 그리고 `index.js`/`index.js.map`을 삭제. 그리고 dist파일을 ignore해준다.
+
+- **error가 발생하면 typescript를 다시 한 번 설치해준다**
+
+```sh
+yarn add typescript
+```
+
+> `tsc-wacth`를 설치하면서 typescript가 지워진 것 같다...(왜지?)
