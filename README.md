@@ -98,7 +98,7 @@ const sayHi = (name, age, gender?)
 Hello Suwan, you are 24, you are a undefined
 ```
 
-##### 대단한 기능이다..!!
+> 대단한 기능이다..!! 이것이 바로 TypeScript의 장점
 
 #### Types
 
