@@ -79,3 +79,19 @@ sayHi(name, age, gender);
 [![](img/error.png)]
 
 이 에러를 해석해보면, `나는 3개의 args가 올 것을 예상했지만, 2개 밖에 얻지 못했어. 그래서 난 이 함수를 실행하지 않을거야!` 라는 뜻이다.
+
+이것이 TypeScript가 보호해주는 방법이다. 바로 나의 멍청한 실수들로부터 말이다.
+
+그리고 다음과 같이 `gender` 뒤에 `?`를 붙여주게 되면 다시 실행이 된다.
+
+```ts
+const sayHi = (name, age, gender?)
+```
+
+`gender` 파라미터는 필수적이 아니라 선택적으로 바뀌게 되면서 다음과 같은 결과가 나온다.
+
+```sh
+Hello Suwan, you are 24, you are a undefined
+```
+
+- 대단한 기능이다..!!
