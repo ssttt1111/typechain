@@ -165,3 +165,59 @@ yarn add typescript
 ```
 
 > `tsc-wacth`를 설치하면서 typescript가 지워진 것 같다...(왜지?)
+
+### TypeScript Object
+
+#### Object를 넘겨줘볼까
+
+함수에 `Object`를 넘겨주고 싶다면, `TypeScript`가 `Object`를 이해할 수 있게 해야 되고, 그 `Object`가 올바른 `type`인지 아닌지 분별하게끔 해야 된다.
+
+위의 예제를 사용해 예를 들어보자.
+
+```ts
+const person = {
+  name: "Suwan",
+  age: 28,
+  gender: "male"
+};
+```
+
+> 위와 같이 `person` 변수를 생성하고 값을 넣어준다.
+
+이제 `person`을 `sayHi`함수에 넘겨주면 어떻게 될까?
+
+```ts
+console.log(sayHi(person));
+```
+
+> 물론 동작하지 않는다. 위에서도 말했듯이 `TypeScript`는 3개의 args가 올 것을 예상했는데, 내가 1개만 주니까 빡쳐서 실행을 하지 않는 것이다.
+
+이제부터 `interface` 어떻게 생성하는지 봐보자.
+
+```ts
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
+```
+
+> 임의적으로 `Human`으로 했지만 뭐든지 상관없다. 여기서 아까 전과 같이 작업. `name: string, age: number, gender: string`
+
+그리고 다음과 같이 작업해준다.
+
+```ts
+const sayHi = (person: Human): string => {
+  return return `Hello ${person.name}, you are ${person.age}, you are a ${
+    person.gender
+  }`;
+}
+```
+
+> 이렇게 해주면 처음과 같이 멋지게 동작할 것이다. (참고로 JS에서는 동작하지 않는다.)
+
+`sayHi`의 인수에 `person`을 넘겨주고 타입은 `Human`으로 설정한다.
+
+다음으로 `person`을 부르면 함수와 연관한 `interface`가 있으므로, `age, gender, name` 속성을 갖고 있는 걸 알 수 있다.
+
+이전과 똑같이 동작하지만 이제 나의 `Object`는 더욱 예측할 수 있다. `interface` 있기 때문이다. 예를 들어, 블록체인의 경우 하나의 block을 `interface`로 정의할 수 있게 된다.
